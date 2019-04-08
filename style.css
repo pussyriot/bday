@@ -1,0 +1,181 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
+
+.gallery {
+    overflow: hidden;
+
+    margin-top: 10px;
+
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+
+    transition: 500ms;
+
+    opacity: 0.8;
+
+    page-break-inside: avoid; /* For Firefox. */
+    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+    break-inside: avoid; /* For standard browsers like IE. :-) */
+}
+
+.gallery img:hover {
+    opacity: 1;
+}
+
+/* .modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: center;
+} */
+
+.modal-img,.model-vid{
+  display: table
+
+  width: 100%;
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.modal-body{
+  padding: 0px;
+}
+
+.modal-dialog {
+      position: relative;
+
+    display: flex;
+
+  height: 100%;
+    margin: auto;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+  border: none;
+}
+
+/*  */
+
+* {
+  box-sizing: border-box;
+
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+nav a {
+  color: #C3B299;
+
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 5vw;
+}
+
+header {
+  /* position: fixed; */
+  width: 100vw;
+
+  border-style: dotted;
+  border-bottom: 5px solid #C3B299;
+
+}
+
+nav {
+  display: flex;
+
+  padding: 10px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  width: 70vw;
+
+  color: #247BA0;
+
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+span {
+  padding: 20px;
+
+  color: #247BA0;
+
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  padding: 10vw 5vw 5vw 5vw;
+
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+	.gallery {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+	.gallery div {
+        width: 200px; margin: 0;
+    }
+  .modal-dialog {
+        margin: 0 8vw;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 24px;
+
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    .gallery div {
+        width: 200px;
+        margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+
+    }
+
+    .wavebeige {
+      width: 100%;
+    }
+}
+
+@media (min-width: 767px) {
+  p {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .wavebeige {
+    width: 35%;
+  }
+}
